@@ -1,0 +1,11 @@
+# Core dependencies for the deepfake detection notebook
+kaggle
+opencv-python-headless
+matplotlib
+seaborn
+pandas
+numpy
+scipy
+scikit-image
+scikit-learn
+tqdm
