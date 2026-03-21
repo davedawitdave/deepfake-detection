@@ -1,16 +1,21 @@
 # Deepfake Detection
 
+## disclamer 
+the notebook deeplearning_deepfake_detection is only spacial video frame authenticity detection which can not able to utilize the full potentical of LSTM so It is just basic ResNet18 CNN model. So ignore mesocnn inside CNN+LSTM for deep learning and you can see the full potential of feeding selected frames to LSTM model after reshaping the output of ResNet CNN.
+
+ 
 ** Traditional Features → Modern Deep Learning**
 
 A complete Colab-based project for detecting deepfakes using the **DFD (FaceForensics-style)** dataset.
 
-### 📊 Results Summary
+###  Results Summary
 
 | Approach                  | Accuracy | Key Insight                          |
 |---------------------------|----------|--------------------------------------|
-| Traditional (LBP + HOG + Color + RF) | **70.0%** | Handcrafted features hit a hard ceiling |
+| Traditional (LBP + HOG + Color + RF) feed SVM | **70.0%** | Handcrafted features hit a hard ceiling |
 | **EfficientNet-B0**       | **0.87 %** | Strong single-frame performance     |
-| **CNN + LSTM** (Best)     | **0.8 %** | Temporal modeling wins              |
+| **Resnet CNN** (only frame)     | **0.8 %** | spacial only              |
+| **CNN + LSTM** (for image)     | **0.95 %** | Temporal modeling wins              |
 
 ###  Project Structure
 
@@ -30,3 +35,4 @@ A complete Colab-based project for detecting deepfakes using the **DFD (FaceFore
 **Requirements** (already included):
 ```bash
 pip install -r requirements.txt# deepfake-detection
+
